@@ -1,11 +1,11 @@
 <?php
 require 'connexion.php';
 
-$email = 'admin@flightdesk.fr';
-$mdp = 'admin123';
+$email = 'VOTRE_ID';
+$mdp = 'VOTRE_MOT_DE_PASSE';
 $mdp_crypte = password_hash($mdp, PASSWORD_DEFAULT);
 
-$sql = "INSERT INTO Utilisateurs (nom, prenom, email, mot_de_passe, role) VALUES ('Ventoso-Mullaert', 'Angelin', ?, ?, 'instructeur')";
+$sql = "INSERT INTO Utilisateurs (nom, prenom, email, mot_de_passe, role) VALUES ('VOTRE_NOM', 'VOTRE_PRENOM', ?, ?, 'VOTRE_FONCTION')";
 $stmt = $pdo->prepare($sql);
 $stmt->execute([$email, $mdp_crypte]);
 
